@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 60px; /* bottom has to be the same as footer height */
+}
+footer {
+    /* just for demo */
+    background-color: #000;
+    border-radius: 5px;
+    text-align:center;
+    padding:20px;
+   /* just for demo */
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
