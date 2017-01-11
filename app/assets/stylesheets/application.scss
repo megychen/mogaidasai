@@ -22,19 +22,22 @@ html {
     min-height: 100%;
 }
 body {
-    margin: 0 0 60px; /* bottom has to be the same as footer height */
+    margin: 0 0 50px; /* bottom has to be the same as footer height */
+    background-color: #E6E6FA;
 }
 footer {
     /* just for demo */
     background-color: #000;
     border-radius: 5px;
-    text-align:center;
-    padding:20px;
+    vertical-align: center;
    /* just for demo */
 
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 60px;
+    height: 50px;
     width: 100%;
+    p:hover {
+      color: #A9A9A9;
+    }
 }
