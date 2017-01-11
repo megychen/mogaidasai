@@ -10,8 +10,22 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% if !current_user %>
+          <li><%= link_to('<span class="glyphicon glyphicon-user"></span> Sign Up'.html_safe, new_user_registration_path) %></li>
+          <li><%= link_to('<span class="glyphicon glyphicon-log-in"></span> Login'.html_safe, new_user_session_path) %></li>
+        <% else %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Hi! <%= current_user.email %>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <%= link_to("<span class='glyphicon glyphicon-log-out'></span> Logout".html_safe, destroy_user_session_path, method: :delete) %>
+              </li>
+            </ul>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
