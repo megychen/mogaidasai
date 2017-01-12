@@ -7,4 +7,7 @@
   <p>
     Description: <%= @job.description %>
   </p>
+  <div class="text-center">
+    <%= link_to("Apply Job", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration: underline;") %>
+  </div>
 </div>
