@@ -1,5 +1,4 @@
 <div class="col-md-12 col-lg-10 col-lg-offset-1">
-  <h4>Better job, better life</h4>
   <hr>
   <div class="pull-right">
     <%= link_to("Add a Job", new_admin_job_path, :class => "btn btn-primary btn-sm") %>
@@ -14,7 +13,12 @@
         </td>
         <td>
           <%= link_to("Edit", edit_admin_job_path(job)) %> |
-          <%= link_to("Destroy", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %>
+          <%= link_to("Destroy", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %> |
+          <% if job.is_hidden %>
+            <%= link_to("Publish", publish_admin_job_path(job), method: :post) %>
+          <% else %>
+            <%= link_to("Hide", hide_admin_job_path(job), method: :post) %>
+          <% end %>
         </td>
         <td>
           <%= job.created_at %>
