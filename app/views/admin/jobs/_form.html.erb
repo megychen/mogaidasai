@@ -1,9 +1,12 @@
 <%= simple_form_for [:admin, @job] do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
+  <%= f.input :category %>
   <%= f.input :wage_lower_bound, :label => "Lower Salary" %>
   <%= f.input :wage_upper_bound, :label => "Upper Salary" %>
+  <%= f.input :company %>
   <%= f.input :contact_email %>
+  <%= f.input :city %>
   <%= f.input :is_hidden %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

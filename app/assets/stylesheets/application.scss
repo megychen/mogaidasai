@@ -19,27 +19,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
-html {
-    position: relative;
-    min-height: 100%;
-}
-body {
-    margin: 0 0 50px; /* bottom has to be the same as footer height */
-    background-color: #E6E6FA;
-}
-footer {
-    /* just for demo */
-    background-color: #000;
-    border-radius: 5px;
-    vertical-align: center;
-   /* just for demo */
 
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    p:hover {
-      color: #A9A9A9;
-    }
+footer {
+  margin-top: 100px;
+  background: #000;
 }

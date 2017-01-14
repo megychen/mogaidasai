@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :jobs do
+    collection do
+      get :search
+    end
     resources :resumes
   end
   namespace :admin do
@@ -10,7 +13,7 @@ Rails.application.routes.draw do
         post :publish
       end
       resources :resumes
-    end    
+    end
   end
-  root "jobs#index"
+  root "welcome#index"
 end
