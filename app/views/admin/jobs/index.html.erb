@@ -13,6 +13,9 @@
         <td>Upper Salary</td>
         <td>Manage</td>
         <td>Publish Time</td>
+        <td>Category</td>
+        <td>Company</td>
+        <td>City</td>
       </tr>
     </thead>
     <% @jobs.each do |job| %>
@@ -40,8 +43,11 @@
           <% end %>
         </td>
         <td>
-          <%= job.created_at %>
+          <%= time_ago_in_words(job.created_at) %> ago
         </td>
+        <td><%= job.category %></td>
+        <td><%= job.company %></td>
+        <td><%= job.city %></td>
       </tr>
     <% end %>
   </table>

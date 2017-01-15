@@ -14,6 +14,22 @@ class JobsController < ApplicationController
               Job.published.order('wage_lower_bound DESC')
             when 'by_upper_bound'
               Job.published.order('wage_upper_bound DESC')
+            when 'by_category1'
+              Job.where(:category => "category1").recent
+            when 'by_category2'
+              Job.where(:category => "category2").recent
+            when 'by_category3'
+              Job.where(:category => "category3").recent
+            when 'by_category4'
+              Job.where(:category => "category4").recent
+            when 'by_category5'
+              Job.where(:category => "category5").recent
+            when 'by_category6'
+              Job.where(:category => "category6").recent
+            when 'by_category7'
+              Job.where(:category => "category7").recent
+            when 'by_category8'
+              Job.where(:category => "category8").recent
             else
               Job.published.recent
             end
@@ -62,6 +78,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden)
+    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :category, :company, :city)
   end
 end

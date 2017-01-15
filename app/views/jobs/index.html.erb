@@ -1,6 +1,4 @@
-<div class="col-md-12 col-lg-10 col-lg-offset-1">
-  <h4>Better job, better life</h4>
-  <hr>
+<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
   <div class="dropdown clearfix pull-right">
     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="true">Filter
@@ -17,34 +15,31 @@
         <%= link_to("Publish Time", jobs_path) %>
       </li>
     </ul>
-</div>
+  </div>
   <br><br>
-  <table class="table table-boldered">
-    <thead>
-      <tr>
-        <td>Title</td>
-        <td>Lower Salary</td>
-        <td>Upper Salary</td>
-        <td>Publish Time</td>
-      </tr>
-    </thead>
-    <tbody>
-      <% @jobs.each do |job| %>
-        <tr>
-          <td>
-            <%= link_to(job.title, job_path(job)) %>
-          </td>
-          <td>
-            <%= job.wage_lower_bound %>
-          </td>
-          <td>
-            <%= job.wage_upper_bound %>
-          </td>
-          <td>
-            <%= job.created_at %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <% @jobs.each do |job| %>
+  <div class="row job-show">
+    <div class="col-md-4 col-lg-3">
+      <h3>Logo</h3>
+    </div>
+    <div class="col-md-8 col-lg-9">
+      <p><%= link_to(job.title, job_path(job)) %></p>
+      <p>Salary: <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %></p>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>  <%= job.company %></span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <span><i class="fa fa-location-arrow" aria-hidden="true"></i>  <%= job.city %></span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <span><i class="fa fa-clock-o" aria-hidden="true"></i>  <%= time_ago_in_words(job.created_at) %> ago</span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <span><i class="fa fa-envelope" aria-hidden="true"></i>  <%= job.contact_email %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
 </div>
