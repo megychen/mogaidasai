@@ -43,6 +43,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'sunspot_rails'
 gem 'progress_bar'
+gem 'will_paginate-bootstrap'
 
 
 group :development, :test do

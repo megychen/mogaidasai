@@ -19,5 +19,8 @@
     </div>
     <br><br><br>
       <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+      <div class="text-center">
+        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+      </div>
   </div>
 </div>
