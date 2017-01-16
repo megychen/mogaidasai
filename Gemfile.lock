@@ -107,6 +107,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     options (2.3.2)
     orm_adapter (0.5.0)
+    pg (0.19.0)
     pr_geohash (1.0.0)
     progress_bar (1.1.0)
       highline (~> 1.6)
@@ -221,6 +222,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  pg
   progress_bar
   puma (~> 3.0)
   rails (~> 5.0.1)
