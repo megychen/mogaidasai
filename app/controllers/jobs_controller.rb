@@ -14,22 +14,22 @@ class JobsController < ApplicationController
               Job.published.order('wage_lower_bound DESC')
             when 'by_upper_bound'
               Job.published.order('wage_upper_bound DESC')
-            when 'by_category1'
-              Job.where(:category => "category1").recent
-            when 'by_category2'
-              Job.where(:category => "category2").recent
-            when 'by_category3'
-              Job.where(:category => "category3").recent
-            when 'by_category4'
-              Job.where(:category => "category4").recent
-            when 'by_category5'
-              Job.where(:category => "category5").recent
-            when 'by_category6'
-              Job.where(:category => "category6").recent
-            when 'by_category7'
-              Job.where(:category => "category7").recent
-            when 'by_category8'
-              Job.where(:category => "category8").recent
+            when 'by_developer'
+              Job.where(:category => "developer").recent
+            when 'by_healthcare'
+              Job.where(:category => "healthcare").recent
+            when 'by_customer-service'
+              Job.where(:category => "customer-service").recent
+            when 'by_sales-marketing'
+              Job.where(:category => "sales-marketing").recent
+            when 'by_legal'
+              Job.where(:category => "legal").recent
+            when 'by_non-profit'
+              Job.where(:category => "non-profit").recent
+            when 'by_human-resource'
+              Job.where(:category => "human-resource").recent
+            when 'by_design'
+              Job.where(:category => "design").recent
             else
               Job.published.recent
             end

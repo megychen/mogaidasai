@@ -9,198 +9,203 @@
 </div> -->
 
 
-<div class="container">
-	<div class="row">
-		<!-- Carousel -->
-    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-			  	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			</ol>
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-			    <div class="item active">
-			    	<img src="http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="First slide">
-                    <!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-center">
-                            <h2>
-                            	<span>Welcome to <strong>Job Listing</strong></span>
-                            </h2>
-                            <br>
-                            <h3>
-                            	<span>Discover your best future.</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <%= link_to("Get started now", jobs_path, class: "btn btn-theme btn-lg btn-min-block") %></div>
-                        </div>
-                    </div><!-- /header-text -->
+
+<section id="home" class="sec-main">
+    <h1 class="main-heading">Discover You Best Future Here</h1>
+</section>
+
+  <section id="about" class="sec-about">
+    <div class="container">
+      <h1>About Us</h1>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <p>Hi, WELCOME to OW offer. What's OW meaning? OW is one week. Our mission is helping you to find your dream work just one week. Looks like impossible?
+						Let me tell you, come OW, everything is possible!
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="sec-services">
+    <div class="container">
+      <h1>Why OW Offer?</h1>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa fa-building"></i>
+
+          <h2 class="h3">Top Tech Companies</h2>
+
+          <p>1000+ Companies registered on OW offer, just wating you coming</p>
+        </div>
+
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-calendar-o"></i>
+
+          <h2 class="h3">Quickly Responsive</h2>
+
+          <p>You can receive 10-20 interview invitations within one week.</p>
+        </div>
+
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-fighter-jet"></i>
+
+          <h2 class="h3">Higher Effective</h2>
+
+          <p>One Click, one search, you will get what you want.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+		<div class="container">
+			<h1>Categories</h1>
+
+      <hr />
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("developer.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Developer", jobs_path(:order => "by_developer")) %></h4>
+			      </div>
 			    </div>
-			    <div class="item">
-			    	<img src="http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="Second slide">
-			    	<!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-center">
-                            <h2>
-                                <span>Welcome to Job Listing</span>
-                            </h2>
-                            <br>
-                            <h3>
-                            	<span>One search, one click</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <%= link_to("Get started now", jobs_path, class: "btn btn-theme btn-lg btn-min-block") %></div>
-                        </div>
-                    </div><!-- /header-text -->
+			  </div>
+
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("customer-service.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Customer Service", jobs_path(:order => "by_customer-service")) %></h4>
+			      </div>
 			    </div>
-			    <div class="item">
-			    	<img src="http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="Third slide">
-			    	<!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-center">
-                            <h2>
-                                <span>Welcome to Job Listing</span>
-                            </h2>
-                            <br>
-                            <h3>
-                            	<span>Add resume is free.</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <%= link_to("Get started now", jobs_path, class: "btn btn-theme btn-lg btn-min-block") %></div>
-                        </div>
-                    </div><!-- /header-text -->
+			  </div>
+
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("healthcare.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Health Care", jobs_path(:order => "by_healthcare")) %></h4>
+			      </div>
 			    </div>
+			  </div>
+
+				<div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("sales-marketing.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Sales-Marketing", jobs_path(:order => "by_sales-marketing")) %></h4>
+			      </div>
+			    </div>
+			  </div>
 			</div>
-			<!-- Controls -->
-			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-		    	<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-		    	<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
-		</div><!-- /carousel -->
-	</div>
-</div>
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+			   <div class="thumbnail">
+			      <%= image_tag("lawyer.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Legal", jobs_path(:order => "by_legal")) %></h4>
+			      </div>
+			    </div>
+			  </div>
 
-<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" id="advantage">
-  <h2 class="text-center">Why Us?</h2>
-  <div class="row">
-    <div class="col-md-6 col-lg-4">
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("non-profit.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Nonprofit", jobs_path(:order => "by_non-profit")) %></h4>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("reunion.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Human Resources", jobs_path(:order => "by_human-resource")) %></h4>
+			      </div>
+			    </div>
+			  </div>
+
+				<div class="col-sm-6 col-md-3">
+			    <div class="thumbnail">
+			      <%= image_tag("design.png") %>
+			      <div class="caption">
+			        <h4><%= link_to("Design", jobs_path(:order => "by_design")) %></h4>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+	</section>
+
+
+  <section id="testimonials" class="sec-testimonials">
+    <div class="container">
+      <h1>Employees said</h1>
+
+      <hr />
+
       <div class="row">
-        <div class="col-md-4">
-          <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+        <div class="col-sm-4">
+          <p class="text-center">"OW offer is such amazing. I got my dream work just one week!"</p>
+
+          <p class="text-right">&mdash; Elizabeth</p>
         </div>
-        <div class="col-md-8">
-          <p>
-            You can expect to receive 5-10 interview invitations within a week.
-          </p>
+
+        <div class="col-sm-4">
+          <p class="text-center">"Are you paid fairly? Big boss know your worth? Come here, you'll got them!"</p>
+
+          <p class="text-right">&mdash; Milly Cooper</p>
+        </div>
+
+        <div class="col-sm-4">
+          <p class="text-center">"I have worked with several different people and it always seemed like a pain—luckily I found OW offer. Thanks them!"</p>
+
+          <p class="text-right">&mdash; Jerry Lai</p>
         </div>
       </div>
-
     </div>
-    <div class="col-md-6 col-lg-4">
+  </section>
+
+  <section id="contact" class="sec-contact">
+    <div class="container">
+      <h1>Leave Your Message</h1>
+
+      <hr />
+
       <div class="row">
-        <div class="col-md-4">
-          <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-8">
-          <p>
-            You can expect to receive 5-10 interview invitations within a week.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="row">
-        <div class="col-md-4">
-          <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-8">
-          <p>
-            You can expect to receive 5-10 interview invitations within a week.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="col-sm-4 col-sm-offset-4">
+          <form class="center-block" action="#" method="post">
+            <div class="form-group">
+              <label class="sr-only" for="inputName">Full name</label>
 
+              <input id="inputName" class="form-control" type="text" placeholder="Adam Smith" required />
+            </div>
 
-<div class="col-md-12 col-lg-10 col-lg-offset-1" id="categories">
-  <!-- category -->
-  <h2 class="text-center">Category</h2>
-  <div class="row row-1">
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("PHP", jobs_path(:order => "by_category1")) %>
-        </p>
+            <div class="form-group">
+              <label for="inputMail" class="sr-only">Email Address</label>
+
+              <input id="inputMail" class="form-control" type="email" placeholder="adam.smith@mail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="inputMessage" class="sr-only">Your Message</label>
+
+              <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-default center-block" type="submit" value="Hire me">Hire me</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("Category2", jobs_path(:order => "by_category2")) %>
-        </p>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("Category3", jobs_path(:order => "by_category3")) %>
-        </p>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("Category4", jobs_path(:order => "by_category4")) %>
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="row row-2">
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("Category5", jobs_path(:order => "by_category5")) %>
-        </p>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("Category6", jobs_path(:order => "by_category6")) %>
-        </p>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("Category7", jobs_path(:order => "by_category7")) %>
-        </p>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6">
-      <div class="category-box text-center">
-        <h3>Image</h3>
-        <p>
-          <%= link_to("Category8", jobs_path(:order => "by_category8")) %>
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- end category -->
-</div>
+  </section>
