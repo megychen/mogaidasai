@@ -24,7 +24,7 @@ $red: #ad0000;
 /* sider bar */
 
 .nav-sidebar {
-  margin-top: 50px;
+  margin-top: 75px;
     width: 100%;
     padding: 8px 0;
     border-right: 1px solid #ddd;
@@ -120,6 +120,10 @@ div.alert {
   margin-bottom: 3px;
 }
 
+.sec-main {
+  margin-top: 70px;
+}
+
 .main-heading {
   font-family: 'Open sans', sans-serif;
   font-weight: 300;
@@ -213,12 +217,12 @@ hr {
   vertical-align: top;
 }
 
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
   color: $red;
 }
 
-.navbar-default .navbar-nav>li>a:active {
+.navbar-inverse .navbar-nav>li>a:active {
   color: darken($red, 5%);
 }
 

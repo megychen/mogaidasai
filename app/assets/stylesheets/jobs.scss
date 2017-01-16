@@ -6,7 +6,7 @@
 $red: #ad0000;
 
 .jobs-show-page {
-  margin-top: 50px;
+  margin-top: 75px;
   .dropdown {
     margin-top: 20px;
   }
@@ -30,7 +30,7 @@ $red: #ad0000;
 /* Job-show-page */
 
 .job-show-page {
-  margin-top: 50px;
+  margin-top: 75px;
   .job-content {
     padding: 15px;
     border-radius:5px;
@@ -49,5 +49,11 @@ $red: #ad0000;
 }
 
 .admin-jobs-show-page {
-  margin-top: 60px;
+  margin-top: 80px;
+}
+
+/* search page */
+
+#search-page {
+  margin-top: 75px;
 }

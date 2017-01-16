@@ -1,10 +1,19 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-/*.search-bar {
-  margin-top: 7px;
+$red: #ad0000;
+.search-bar {
+  position: relative;
+  margin-top: 10px;
+  display: inline-block;
+  padding-right: 40px;
+  .search-bar-input {
+    min-width: 300px;
+  }
+  .search-bar-input:focus, .search-bar-submit:hover, .search-bar-submit:focus {
+    border-color: $red;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(173, 0, 0, .6);
+    background-color: #fff;
+    color: $red;
+  }
 }
-.search-bar .search-bar-input {
-  min-width: 200px;
-} */
