@@ -89,6 +89,7 @@ body {
 .navbar {
   margin-bottom: 0;
 }
+
 .navbar a,
 .sec-about p {
   text-align: center;
@@ -116,12 +117,13 @@ body {
 }
 
 div.alert {
-  margin-top: 55px;
+  margin-top: 70px;
   margin-bottom: 3px;
+  border-radius: 0;
 }
 
 .sec-main {
-  margin-top: 70px;
+  margin-top: -5px;
 }
 
 .main-heading {
@@ -404,5 +406,14 @@ footer {
     margin-top: 20px;
     color: #fff;
     width: 100%;
+  }
+}
+
+/* sign-up */
+
+.sign-up-page, .login-page {
+  margin-top: 100px;
+  input:focus {
+    border-color: $red;
   }
 }

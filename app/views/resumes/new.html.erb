@@ -1,9 +1,12 @@
-<div class="col-md-8 col-md-2">
-  <h3 class="text-center">Applying Job for <%= @job.title %></h3>
-  <hr>
-  <%= simple_form_for [@job, @resume] do |f| %>
-    <%= f.input :content %>
-    <%= f.input :attachment %>
-    <%= f.submit "Submit", class: "btn btn-primary" %>
-  <% end %>
+<div class="resume-new-page">
+  <div class="col-md-4 col-md-offset-4">
+    <h3 class="text-center">Applying Job for <%= @job.title %></h3>
+    <hr>
+    <%= simple_form_for [@job, @resume] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :attachment %>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
 </div>

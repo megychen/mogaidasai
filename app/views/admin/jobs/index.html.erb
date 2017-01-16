@@ -1,7 +1,7 @@
 <div class="container-fluid admin-jobs-show-page">
   <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
     <div class="pull-right">
-      <%= button_to("Add a Job", new_admin_job_path, :class => "btn btn-primary") %>
+      <%= link_to("Add a Job", new_admin_job_path(@job), :class => "btn btn-primary", method: :get) %>
     </div><br><br>
   <% @jobs.each do |job| %>
     <div class="row jobs-show">
@@ -10,10 +10,11 @@
           <%= link_to("Edit", edit_admin_job_path(job)) %> |
           <%= link_to("Destroy", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %> |
           <% if job.is_hidden %>
-            <%= link_to("Publish", publish_admin_job_path(job), method: :post) %>
+            <%= link_to("Publish", publish_admin_job_path(job), method: :post) %> |
           <% else %>
-            <%= link_to("Hide", hide_admin_job_path(job), method: :post) %>
+            <%= link_to("Hide", hide_admin_job_path(job), method: :post) %> |
           <% end %>
+          <%= link_to("Resumes Count", admin_job_resumes_path(job)) %> <span class="badge"><%= job.resumes.count %></span></label>
         </div>
 
         <p>

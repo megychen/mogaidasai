@@ -48,8 +48,16 @@ $red: #ad0000;
   }
 }
 
-.admin-jobs-show-page {
+.admin-jobs-show-page, .admin-new-page, .admin-edit-page, .resume-new-page, .resumes-show-page {
   margin-top: 80px;
+  padding: 20px;
+}
+
+.admin-new-page, .admin-edit-page {
+
+  .col-md-8 {
+    margin-bottom: 20px;
+  }
 }
 
 /* search page */
