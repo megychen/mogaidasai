@@ -1,16 +1,26 @@
-<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-  <div class="show-header">
+<div class="container-fluid job-show-page">
+  <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <h3 class="text-center"><%= @job.title %> at <%= @job.company %></h1>
+    <hr>
+    <div class="job-content">
+      <p>
+        <span>Job Description:</sapn> <br>
+        <%= simple_format(@job.description, class: "job-description") %>
+      </p>
+      <div class="divider"></div>
+      <p>
+        <span>Loaction:</span> <%= @job.city %>
+      </p>
+      <p>
+        <span>Publish Time</span>: <%= time_ago_in_words(@job.created_at) %> ago
+      </p>
+      <p>
+        <span>Contact:</span> <%= @job.contact_email %>
+      </p>
+      <div class="text-center">
+        <%= link_to("Apply Now", new_job_resume_path(@job), class: "btn btn-primary") %>
+      </div>
+    </div>
 
-  </div>
-  <div class="show-logo">
-    Category logo
-  </div>
-  <h3 class="text-center"><%= @job.title %> at <%= @job.company %></h1>
-  <p>
-    Job Description: <br>
-    <%= @job.description %>
-  </p>
-  <div class="text-center">
-    <%= link_to("Apply Now", new_job_resume_path(@job), class: "btn btn-primary") %>
   </div>
 </div>

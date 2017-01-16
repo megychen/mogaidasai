@@ -1,39 +1,12 @@
-<div class="col-md-12 col-lg-10 col-lg-offset-1">
-  <hr>
-  <div class="pull-right">
-    <%= link_to("Add a Job", new_admin_job_path, :class => "btn btn-primary btn-sm") %>
-  </div>
-  <br><br>
-  <table class="table table-boldered">
-    <thead>
-      <tr>
-        <td>Title</td>
-        <td>Resume Count</td>
-        <td>Lower Salary</td>
-        <td>Upper Salary</td>
-        <td>Manage</td>
-        <td>Publish Time</td>
-        <td>Category</td>
-        <td>Company</td>
-        <td>City</td>
-      </tr>
-    </thead>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td>
-          <%= render_job_status(job) %>
-          <%= link_to(job.title, admin_job_path(job)) %>
-        </td>
-        <td>
-          <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %>
-        </td>
-        <td>
-          <%= job.wage_lower_bound %>
-        </td>
-        <td>
-          <%= job.wage_upper_bound %>
-        </td>
-        <td>
+<div class="container-fluid admin-jobs-show-page">
+  <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="pull-right">
+      <%= button_to("Add a Job", new_admin_job_path, :class => "btn btn-primary") %>
+    </div><br><br>
+  <% @jobs.each do |job| %>
+    <div class="row jobs-show">
+      <div class="col-md-12 col-lg-10 col-lg-offset-1">
+        <div class="pull-right">
           <%= link_to("Edit", edit_admin_job_path(job)) %> |
           <%= link_to("Destroy", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?" }) %> |
           <% if job.is_hidden %>
@@ -41,14 +14,36 @@
           <% else %>
             <%= link_to("Hide", hide_admin_job_path(job), method: :post) %>
           <% end %>
-        </td>
-        <td>
-          <%= time_ago_in_words(job.created_at) %> ago
-        </td>
-        <td><%= job.category %></td>
-        <td><%= job.company %></td>
-        <td><%= job.city %></td>
-      </tr>
-    <% end %>
-  </table>
+        </div>
+
+        <p>
+          <%= render_job_status(job) %>
+          <%= link_to(job.title, admin_job_path(job)) %>
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Salary: <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %> </p>
+          </div>
+          <div class="col-md-6">
+            <p><i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= job.category %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>  <%= job.company %></span>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-location-arrow" aria-hidden="true"></i>  <%= job.city %></span>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-clock-o" aria-hidden="true"></i>  <%= time_ago_in_words(job.created_at) %> ago</span>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-envelope" aria-hidden="true"></i>  <%= job.contact_email %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
 </div>

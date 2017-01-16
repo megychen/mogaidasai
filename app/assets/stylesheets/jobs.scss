@@ -2,7 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.job-show {
+/* Jobs-show-page */
+$red: #ad0000;
+
+.jobs-show-page {
+  margin-top: 50px;
+  .dropdown {
+    margin-top: 20px;
+  }
+  .btn-default:hover, .btn-default:focus, .btn-default:default, .btn-default.active, .open>.dropdown-toggle.btn-default {
+    color: darken($red, 5%);
+    background: #fff;
+    border: 1px solid #000;
+  }
+}
+
+
+.jobs-show {
   border-bottom: 1px solid lightgrey;
   padding: 15px;
   span {
@@ -10,15 +26,28 @@
   }
 }
 
-.show-header {
-  height: 200px;
-  background-color: lightgrey;
+
+/* Job-show-page */
+
+.job-show-page {
+  margin-top: 50px;
+  .job-content {
+    padding: 15px;
+    border-radius:5px;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12) inset;
+  }
+  a {
+    text-decoration: none;
+  }
+  .job-description {
+    padding-left: 30px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
-.show-logo {
-  width: 100px;
-  height: 100px;
-  background-color: yellow;
-  margin-left: 45%;
-  margin-top: -50px;
+.admin-jobs-show-page {
+  margin-top: 60px;
 }

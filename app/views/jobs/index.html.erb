@@ -1,45 +1,57 @@
-<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-  <div class="dropdown clearfix pull-right">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="true">Filter
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDevider">
-      <li>
-        <%= link_to("Lower Salary", jobs_path(:order => "by_lower_bound")) %>
-      </li>
-      <li>
-        <%= link_to("Upper Salary", jobs_path(:order => "by_upper_bound")) %>
-      </li>
-      <li>
-        <%= link_to("Publish Time", jobs_path) %>
-      </li>
-    </ul>
-  </div>
-  <br><br>
-  <% @jobs.each do |job| %>
-  <div class="row job-show">
-    <div class="col-md-4 col-lg-3">
-      <h3>Logo</h3>
+<div class="container-fluid jobs-show-page">
+  <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="dropdown clearfix pull-right">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="true">Filter
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDevider">
+        <li>
+          <%= link_to("Lower Salary", jobs_path(:order => "by_lower_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Upper Salary", jobs_path(:order => "by_upper_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Publish Time", jobs_path) %>
+        </li>
+      </ul>
     </div>
-    <div class="col-md-8 col-lg-9">
-      <p><%= link_to(job.title, job_path(job)) %></p>
-      <p>Salary: <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %></p>
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>  <%= job.company %></span>
+    <br><br><br>
+    <% @jobs.each do |job| %>
+    <div class="row jobs-show">
+      <div class="col-md-12 col-lg-10 col-lg-offset-1">
+        <div class="pull-right">
+          <%= link_to("Quick Apply", new_job_resume_path(job), class: "btn btn-info btn-sm", method: :get) %>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <span><i class="fa fa-location-arrow" aria-hidden="true"></i>  <%= job.city %></span>
+        <p><%= link_to(job.title, job_path(job)) %></p>
+
+
+        <div class="row">
+          <div class="col-md-6">
+            <p>Salary: <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %> </p>
+          </div>
+          <div class="col-md-6">
+            <p><i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= job.category %></p>
+          </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <span><i class="fa fa-clock-o" aria-hidden="true"></i>  <%= time_ago_in_words(job.created_at) %> ago</span>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <span><i class="fa fa-envelope" aria-hidden="true"></i>  <%= job.contact_email %></span>
+
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>  <%= job.company %></span>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-location-arrow" aria-hidden="true"></i>  <%= job.city %></span>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-clock-o" aria-hidden="true"></i>  <%= time_ago_in_words(job.created_at) %> ago</span>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <span><i class="fa fa-envelope" aria-hidden="true"></i>  <%= job.contact_email %></span>
+          </div>
         </div>
       </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
