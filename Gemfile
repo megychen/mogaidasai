@@ -41,8 +41,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-rails'
 gem 'carrierwave'
-gem 'sunspot_rails'
-gem 'progress_bar'
+gem 'ransack'
+gem 'seo_helper'
 gem 'will_paginate-bootstrap'
 
 

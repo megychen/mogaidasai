@@ -17,12 +17,13 @@
             </li>
             <li>
               <div class="form-group form-inline search-bar">
-                <%= form_tag search_jobs_path, :method => :get do %>
+                <%#= search_form_for @q, url:search_jobs_path, html: { method: :get} do |f| %>
                   <p>
-                    <%= text_field_tag :search, params[:search], class: "form-control search-bar-input", :placeholder => "Job title, Company or City" %>
-                    <%= submit_tag "Search", class: "btn btn-default search-bar-submit" %>
+                    <%#= f.text_field :title, params[:q], class: "form-control search-bar-input", :placeholder => "Job title, Company or City" %>
+                    <%#= f.submit "Search", class: "btn btn-default search-bar-submit" %>
                   </p>
-                <% end %>
+                <%# end %>
+                <%= render :partial => "jobs/search_bar" %>
               </div>
             </li>
           </ul>

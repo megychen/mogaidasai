@@ -18,7 +18,4 @@ class Job < ApplicationRecord
     self.save
   end
 
-  searchable do
-    text :title, :city, :category, :company
-  end
 end

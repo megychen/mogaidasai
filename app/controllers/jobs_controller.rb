@@ -1,5 +1,7 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :validate_search_key, only: [:search]
+
   def show
     @job = Job.find(params[:id])
     if @job.is_hidden
@@ -69,10 +71,32 @@ class JobsController < ApplicationController
   end
 
   def search
-    @search = Job.search do
-      fulltext params[:search]
+    if @query_string.present?
+      search_result = Job.ransack(@search_criteria).result(:distinct => true)
+      @jobs = search_result.recent.paginate(:page => params[:page], :per_page => 5 )
     end
-    @jobs = @search.results
+  end
+
+
+  protected
+
+  def validate_search_key
+    @query_string = params[:q].gsub(/\\|\'|\/|\?/, "")
+    if params[:q].present?
+      @search_criteria =  {
+        title_or_company_or_city_cont: @query_string
+      }
+    end
+  end
+
+
+  def search_criteria(query_string)
+    { :title_cont => query_string }
+  end
+
+  def render_highlight_content(job,query_string)
+    excerpt_cont = excerpt(job.title, query_string, radius: 500)
+    highlight(excerpt_cont, query_string)
   end
 
   private
