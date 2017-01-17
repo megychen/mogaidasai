@@ -1,0 +1,19 @@
+current directory: /Users/megy/full_stack/job-listing/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+/Users/megy/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170117-46079-19q5b48.rb extconf.rb
+creating Makefile
+
+current directory: /Users/megy/full_stack/job-listing/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/megy/full_stack/job-listing/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/megy/full_stack/job-listing/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20170117-46079-14uva3x/byebug
