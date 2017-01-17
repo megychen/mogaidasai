@@ -44,8 +44,9 @@
                     <% end %>
                   </li>
                   <li>
-                    <%= link_to("Post a Job", new_job_path) %>
+                    <%#= link_to("<span class='glyphicon glyphicon-save-file'></span> My Jobs".html_safe, account_jobs_path) %>
                   </li>
+                  <li class="divider"></li>
                   <li>
                     <%= link_to("<span class='glyphicon glyphicon-log-out'></span> Logout".html_safe, destroy_user_session_path, method: :delete) %>
                   </li>
