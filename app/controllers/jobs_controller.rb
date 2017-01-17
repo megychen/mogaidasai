@@ -15,21 +15,21 @@ class JobsController < ApplicationController
             when 'by_upper_bound'
               Job.published.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 5)
             when 'by_developer'
-              Job.where(:category => "developer").recent
+              Job.where(:category => "developer").recent.paginate(:page => params[:page], :per_page => 5)
             when 'by_healthcare'
-              Job.where(:category => "healthcare").recent
+              Job.where(:category => "healthcare").recent.paginate(:page => params[:page], :per_page => 5)
             when 'by_customer-service'
-              Job.where(:category => "customer-service").recent
+              Job.where(:category => "customer-service").recent.paginate(:page => params[:page], :per_page => 5)
             when 'by_sales-marketing'
-              Job.where(:category => "sales-marketing").recent
+              Job.where(:category => "sales-marketing").recent.paginate(:page => params[:page], :per_page => 5)
             when 'by_legal'
-              Job.where(:category => "legal").recent
+              Job.where(:category => "legal").recent.paginate(:page => params[:page], :per_page => 5)
             when 'by_non-profit'
-              Job.where(:category => "non-profit").recent
+              Job.where(:category => "non-profit").recent.paginate(:page => params[:page], :per_page => 5)
             when 'by_human-resource'
-              Job.where(:category => "human-resource").recent
+              Job.where(:category => "human-resource").recent.paginate(:page => params[:page], :per_page => 5)
             when 'by_design'
-              Job.where(:category => "design").recent
+              Job.where(:category => "design").recent.paginate(:page => params[:page], :per_page => 5)
             else
               Job.published.recent.paginate(:page => params[:page], :per_page => 5)
             end
