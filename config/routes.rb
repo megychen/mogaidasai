@@ -16,5 +16,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :chat_rooms, only: [:new, :create, :show, :index]
+  mount ActionCable.server => '/cable'
+
   root "welcome#index"
 end
