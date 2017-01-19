@@ -14,6 +14,7 @@ class ResumesController < ApplicationController
 
     if @resume.save
       redirect_to job_path(@job), notice: "Resume Upload Success"
+      current_user.apply!(@job)
     else
       render :new
     end

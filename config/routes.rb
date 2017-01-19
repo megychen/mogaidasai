@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :account do
+    resources :jobs
+  end
+
   resources :chat_rooms, only: [:new, :create, :show, :index]
   mount ActionCable.server => '/cable'
 

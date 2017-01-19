@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :validate_search_key, only: [:search]
 
   def show
@@ -76,6 +76,7 @@ class JobsController < ApplicationController
       @jobs = search_result.recent.paginate(:page => params[:page], :per_page => 5 )
     end
   end
+
 
 
   protected
