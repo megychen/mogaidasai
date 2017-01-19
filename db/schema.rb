@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119141224) do
+ActiveRecord::Schema.define(version: 20170119150257) do
 
   create_table "chat_rooms", force: :cascade do |t|
     t.string   "title"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170119141224) do
     t.string   "company"
     t.string   "category"
     t.integer  "user_id"
+    t.string   "timestamp_field"
   end
 
   create_table "messages", force: :cascade do |t|
