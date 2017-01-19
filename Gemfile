@@ -44,7 +44,6 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'seo_helper'
 gem 'will_paginate-bootstrap'
-gem 'redis'
 
 
 group :development, :test do
