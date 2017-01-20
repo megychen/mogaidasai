@@ -410,16 +410,8 @@ footer {
   }
 }
 
-/* sign-up */
 
-.sign-up-page, .login-page {
-  margin-top: 100px;
-  input:focus {
-    border-color: $red;
-  }
-}
-
-/* login */
+/* login/sign-up */
 
 .login-page, .sign-up-page {
   margin-top: 120px;
