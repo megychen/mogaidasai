@@ -7,13 +7,13 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuDevider">
         <li>
-          <%= link_to("Lower Salary", search_path(:order => "by_lower_bound")) %>
+          <%= link_to("Lower Salary", category_jobs_path(:order => "by_lower_bound")) %>
         </li>
         <li>
-          <%= link_to("Upper Salary", search_path(:order => "by_upper_bound")) %>
+          <%= link_to("Upper Salary", category_jobs_path(:order => "by_upper_bound")) %>
         </li>
         <li>
-          <%= link_to("Publish Time", search_path) %>
+          <%= link_to("Publish Time", category_jobs_path) %>
         </li>
       </ul>
     </div>
@@ -25,7 +25,7 @@
     <% else %>
       <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
       <div class="text-center">
-        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+        <%#= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
       </div>
     <% end %>
   </div>

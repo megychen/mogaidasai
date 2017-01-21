@@ -7,8 +7,13 @@ $red: #ad0000;
   margin-top: 10px;
   display: inline-block;
   padding-right: 40px;
-  .search-bar-input {
+  transition: 1s;
+  .search-bar-input  {
     min-width: 300px;
+    transition: 1s;
+  }
+  .search-bar-submit {
+    transition: 1s;
   }
   .search-bar-input:focus, .search-bar-submit:hover, .search-bar-submit:focus, .search-bar-submit:active {
     border-color: $red;

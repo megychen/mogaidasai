@@ -77,6 +77,14 @@ class JobsController < ApplicationController
     end
   end
 
+  def category
+    if params[:order1]
+      @jobs = Job.published.where(:category => "developer")
+    else params[:order1] && params[:order]
+      @jobs = Job.published.where(:category => "developer").order("wage_lower_bound DESC")
+    end
+  end
+
 
 
   protected

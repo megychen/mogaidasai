@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :jobs do
     collection do
       get :search
+      get :category
     end
     resources :resumes
   end
@@ -19,9 +20,6 @@ Rails.application.routes.draw do
   namespace :account do
     resources :jobs
   end
-
-  resources :chat_rooms, only: [:new, :create, :show, :index]
-  mount ActionCable.server => '/cable'
 
   root "welcome#index"
 end

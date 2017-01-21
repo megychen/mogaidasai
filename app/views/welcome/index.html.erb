@@ -66,7 +66,8 @@
 			    <div class="thumbnail">
 			      <%= image_tag("developer.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Developer", jobs_path(:order => "by_developer")) %></h4>
+			        <h4><%#= link_to("Developer", jobs_path(:order => "by_developer")) %></h4>
+              <h4><%= link_to("Developer", category_jobs_path(:order1 => "by_developer")) %></h4>
 			      </div>
 			    </div>
 			  </div>

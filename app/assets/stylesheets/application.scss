@@ -323,10 +323,17 @@ hr {
 }
 .thumbnail h4 {
   text-align: center;
-  margin:0;
+  margin: 0;
+  margin-left: -5px;
+  margin-right: -5px;
   padding:8px 0;
-  border:solid 1px #eee;
-  background: #F5F5F5;
+  border-top: solid 1px #eee;
+  /*background: #F5F5F5;*/
+  transition: 1s;
+}
+
+.thumbnail h4:hover {
+  color: $red;
 }
 
 .thumbnail h4 a:hover {
