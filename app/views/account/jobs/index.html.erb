@@ -2,7 +2,7 @@
   <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
     <br><br><br>
-      <%= render :partial => "jobs/jobs_item", :collection => @jobs, :as => :job %>
+      <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
       <div class="text-center">
         <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
       </div>

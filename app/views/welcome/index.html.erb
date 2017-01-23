@@ -66,8 +66,7 @@
 			    <div class="thumbnail">
 			      <%= image_tag("developer.png") %>
 			      <div class="caption">
-			        <h4><%#= link_to("Developer", jobs_path(:order => "by_developer")) %></h4>
-              <h4><%= link_to("Developer", category_jobs_path(:order1 => "by_developer")) %></h4>
+              <h4><%= link_to("Developer", developer_jobs_path(:order=> "by_developer")) %></h4>
 			      </div>
 			    </div>
 			  </div>
@@ -76,7 +75,7 @@
 			    <div class="thumbnail">
 			      <%= image_tag("customer-service.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Customer Service", jobs_path(:order => "by_customer-service")) %></h4>
+			        <h4><%= link_to("Customer Service", customer_service_jobs_path(:order => "by_customer-service")) %></h4>
 			      </div>
 			    </div>
 			  </div>
@@ -85,7 +84,7 @@
 			    <div class="thumbnail">
 			      <%= image_tag("healthcare.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Health Care", jobs_path(:order => "by_healthcare")) %></h4>
+			        <h4><%= link_to("Health Care", healthcare_jobs_path(:order => "by_healthcare")) %></h4>
 			      </div>
 			    </div>
 			  </div>
@@ -94,7 +93,7 @@
 			    <div class="thumbnail">
 			      <%= image_tag("sales-marketing.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Sales-Marketing", jobs_path(:order => "by_sales-marketing")) %></h4>
+			        <h4><%= link_to("Sales-Marketing", sales_marketing_jobs_path(:order => "by_sales-marketing")) %></h4>
 			      </div>
 			    </div>
 			  </div>
@@ -104,7 +103,7 @@
 			   <div class="thumbnail">
 			      <%= image_tag("lawyer.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Legal", jobs_path(:order => "by_legal")) %></h4>
+			        <h4><%= link_to("Legal", legal_jobs_path(:order => "by_legal")) %></h4>
 			      </div>
 			    </div>
 			  </div>
@@ -113,7 +112,7 @@
 			    <div class="thumbnail">
 			      <%= image_tag("non-profit.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Nonprofit", jobs_path(:order => "by_non-profit")) %></h4>
+			        <h4><%= link_to("Nonprofit", non_profit_jobs_path(:order => "by_non-profit")) %></h4>
 			      </div>
 			    </div>
 			  </div>
@@ -122,7 +121,7 @@
 			    <div class="thumbnail">
 			      <%= image_tag("reunion.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Human Resources", jobs_path(:order => "by_human-resource")) %></h4>
+			        <h4><%= link_to("Human Resources", human_resource_jobs_path(:order => "by_human-resource")) %></h4>
 			      </div>
 			    </div>
 			  </div>
@@ -131,7 +130,7 @@
 			    <div class="thumbnail">
 			      <%= image_tag("design.png") %>
 			      <div class="caption">
-			        <h4><%= link_to("Design", jobs_path(:order => "by_design")) %></h4>
+			        <h4><%= link_to("Design", design_jobs_path(:order => "by_design")) %></h4>
 			      </div>
 			    </div>
 			  </div>

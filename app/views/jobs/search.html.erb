@@ -1,7 +1,9 @@
 <div id="search-page" class="container-fluid jobs-show-page">
   <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <br>
     <div class="pull-right">
-      <%= link_to("Check All Jobs", jobs_path) %> | <%= link_to("Back", root_path) %>
+      <%= link_to(content_tag(:i, " Check All Jobs", class: "fa fa-reply-all"), jobs_path) %> |
+      <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(:back)) %>
     </div>
 
     <% if @jobs.blank?%>

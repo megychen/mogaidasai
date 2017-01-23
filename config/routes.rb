@@ -3,7 +3,14 @@ Rails.application.routes.draw do
   resources :jobs do
     collection do
       get :search
-      get :category
+      get :developer
+      get :healthcare
+      get :customer_service
+      get :sales_marketing
+      get :legal
+      get :non_profit
+      get :human_resource
+      get :design
     end
     resources :resumes
   end

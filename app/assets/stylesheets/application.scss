@@ -328,16 +328,11 @@ hr {
   margin-right: -5px;
   padding:8px 0;
   border-top: solid 1px #eee;
-  /*background: #F5F5F5;*/
-  transition: 1s;
-}
-
-.thumbnail h4:hover {
-  color: $red;
+  transition: 1.5s;
 }
 
 .thumbnail h4 a:hover {
-  color: darken($red, 5%);
+  color: $red;
   text-decoration: none;
 }
 

@@ -1,0 +1,27 @@
+<div class="container-fluid jobs-show-page">
+  <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="dropdown clearfix pull-right">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="true">Filter
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDevider">
+        <li>
+          <%= link_to("Lower Salary", non_profit_jobs_path(:order => "by_lower_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Upper Salary", non_profit_jobs_path(:order => "by_upper_bound")) %>
+        </li>
+        <li>
+          <%= link_to("Publish Time", non_profit_jobs_path) %>
+        </li>
+      </ul>
+    </div>
+    <br><br><br>
+      <%= render :partial => "jobs/jobs_item", :collection => @jobs, :as => :job %>
+      <div class="text-center">
+        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+      </div>
+
+  </div>
+</div>
