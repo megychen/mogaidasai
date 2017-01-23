@@ -434,6 +434,7 @@ footer {
   	  font-size: 16px;
   	  height: auto;
   	  padding: 10px;
+      transition: 1s;
   		@include box-sizing(border-box);
       &:focus {
         box-shadow: 1px 1px #fff;
