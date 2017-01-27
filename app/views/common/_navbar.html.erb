@@ -17,12 +17,6 @@
             </li>
             <li>
               <div class="form-group form-inline search-bar">
-                <%#= search_form_for @q, url:search_jobs_path, html: { method: :get} do |f| %>
-                  <p>
-                    <%#= f.text_field :title, params[:q], class: "form-control search-bar-input", :placeholder => "Job title, Company or City" %>
-                    <%#= f.submit "Search", class: "btn btn-default search-bar-submit" %>
-                  </p>
-                <%# end %>
                 <%= render :partial => "jobs/search_bar" %>
               </div>
             </li>
@@ -44,7 +38,9 @@
                     <% end %>
                   </li>
                   <li>
-                    <%= link_to("<span class='fa fa-check-square-o'></span> My Jobs".html_safe, account_jobs_path) %>
+                    <% if !current_user.admin? %>
+                      <%= link_to("<span class='fa fa-check-square-o'></span> My Jobs".html_safe, account_jobs_path) %>
+                    <% end %>
                   </li>
                   <li class="divider"></li>
                   <li>

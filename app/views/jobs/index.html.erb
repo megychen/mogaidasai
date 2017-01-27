@@ -16,7 +16,10 @@
           <%= link_to("Publish Time", jobs_path) %>
         </li>
       </ul>
-    </div>
+    </div><br>
+    <% if current_user.admin? %>
+      <%= link_to(content_tag(:i, " Back to Admin", class: "fa fa-reply-all"), admin_jobs_path) %>
+    <% end %>
     <br><br><br>
       <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
       <div class="text-center">
