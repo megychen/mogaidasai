@@ -17,7 +17,7 @@
         </li>
       </ul>
     </div><br>
-    <% if current_user.admin? %>
+    <% if user_signed_in? && current_user.admin? %>
       <%= link_to(content_tag(:i, " Back to Admin", class: "fa fa-reply-all"), admin_jobs_path) %>
     <% end %>
     <br><br><br>

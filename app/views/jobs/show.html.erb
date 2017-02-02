@@ -21,14 +21,17 @@
         <span>Contact:</span> <%= @job.contact_email %>
       </p>
       <div class="text-center">
-        <% if !current_user.admin? %>
-          <% if current_user && current_user.has_applied?(@job) %>
-            <%= link_to("Has Applied", new_job_resume_path(@job), class: "btn btn-primary disabled") %>
-          <% else %>
-            <%= link_to("Apply Now", new_job_resume_path(@job), class: "btn btn-primary") %>
+        <% if user_signed_in? %>
+          <% if !current_user.admin? %>
+            <% if current_user && current_user.has_applied?(@job) %>
+              <%= link_to("Has Applied", new_job_resume_path(@job), class: "btn btn-primary disabled") %>
+            <% else %>
+              <%= link_to("Apply Now", new_job_resume_path(@job), class: "btn btn-primary") %>
+            <% end %>
           <% end %>
+        <% else %>
+          <%= link_to("Apply Now", new_job_resume_path(@job), class: "btn btn-primary") %>
         <% end %>
-
       </div>
     </div>
 
